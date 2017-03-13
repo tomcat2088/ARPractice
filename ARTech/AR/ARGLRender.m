@@ -54,11 +54,17 @@ enum {
 
 // Something to look at, draw a rotating colour cube.
 - (void) drawCube:(float *)viewProjectionMatrix {
-    geometry.viewProjection = GLKMatrix4MakeWithArray(viewProjectionMatrix);
+    float modelViewProjection[16];
+        mtxLoadMatrixf(modelViewProjection, viewProjectionMatrix);
+        mtxScalef(modelViewProjection, 20.0f, 20.0f, 20.0f);
+        mtxTranslatef(modelViewProjection, 0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
+    mtxRotatef(modelViewProjection, gDrawRotateAngle, 0.0f, 1.0f, 0.0f); // Rotate about z axis.
+    geometry.viewProjection = GLKMatrix4MakeWithArray(modelViewProjection);
     
     [geometry draw];
-    return;
-//    // Colour cube data.
+    
+//    return;
+    // Colour cube data.
 //    int i;
 //    const GLfloat cube_vertices[8][3] = {
 //        /* +z */ { 0.5f, 0.5f, 0.5f }, { 0.5f, -0.5f, 0.5f }, { -0.5f, -0.5f, 0.5f }, { -0.5f, 0.5f, 0.5f },
@@ -76,11 +82,11 @@ enum {
 //        /* +z */ { 3, 2, 1, 0 }, /* -y */ { 2, 3, 7, 6 }, /* +y */ { 0, 1, 5, 4 },
 //        /* -x */ { 3, 0, 4, 7 }, /* +x */ { 1, 2, 6, 5 }, /* -z */ { 4, 5, 6, 7 }
 //    };
-//    float modelViewProjection[16];
+////    float modelViewProjection[16];
 //
 //    mtxLoadMatrixf(modelViewProjection, viewProjectionMatrix);
 //    mtxRotatef(modelViewProjection, gDrawRotateAngle, 0.0f, 0.0f, 1.0f); // Rotate about z axis.
-//    mtxScalef(modelViewProjection, 20.0f, 20.0f, 20.0f);
+//    mtxScalef(modelViewProjection, 10.0f, 10.0f, 10.0f);
 //    mtxTranslatef(modelViewProjection, 0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
 //    glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEW_PROJECTION_MATRIX], 1, GL_FALSE, modelViewProjection);
 //
@@ -107,7 +113,7 @@ enum {
 }
 
 - (void)updateWithTimeDelta:(NSTimeInterval)timeDelta {
-    if (gDrawRotate) {
+    if (YES) {
         gDrawRotateAngle += (float)timeDelta * 45.0f; // Rotate cube at 45 degrees per second.
         if (gDrawRotateAngle > 360.0f) {
             gDrawRotateAngle -= 360.0f;

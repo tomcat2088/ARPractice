@@ -15,7 +15,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"cube3" ofType:@".obj"];
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"monkey" ofType:@".obj"];
         [self loadFromObjFile:filePath];
     }
     return self;

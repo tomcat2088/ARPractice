@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64AB8BC0A657D07EED428C6C /* SimpleARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8BFB3350D8B2752A6877 /* SimpleARViewController.mm */; };
+		64AB8BF6E15EF0484E800A1D /* ARCameraCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8430CA316FC6666B5B8F /* ARCameraCapture.mm */; };
+		8E110B101E76455A00FF6D76 /* ARMarkDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E110B0F1E76455A00FF6D76 /* ARMarkDetector.mm */; };
 		8E7EDE7F1DA8CC1000C8FBEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EDE7E1DA8CC1000C8FBEA /* main.m */; };
 		8E7EDE821DA8CC1000C8FBEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EDE811DA8CC1000C8FBEA /* AppDelegate.m */; };
 		8E7EDE8A1DA8CC1000C8FBEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7EDE891DA8CC1000C8FBEA /* Assets.xcassets */; };
@@ -604,6 +607,8 @@
 		8E7EE92B1DA8CFAC00C8FBEA /* UIImage+GL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EE91B1DA8CFAC00C8FBEA /* UIImage+GL.m */; };
 		8E7EE92C1DA8CFAC00C8FBEA /* unuse in Resources */ = {isa = PBXBuildFile; fileRef = 8E7EE91C1DA8CFAC00C8FBEA /* unuse */; };
 		8E7EE92F1DA8D30500C8FBEA /* Data2 in Resources */ = {isa = PBXBuildFile; fileRef = 8E7EE92E1DA8D30500C8FBEA /* Data2 */; };
+		8EB292211E1212BD006DF557 /* monkey.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 8EB2921F1E1212BD006DF557 /* monkey.mtl */; };
+		8EB292221E1212BD006DF557 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8EB292201E1212BD006DF557 /* monkey.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -624,6 +629,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64AB8430CA316FC6666B5B8F /* ARCameraCapture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARCameraCapture.mm; sourceTree = "<group>"; };
+		64AB8703C1872638D00AEF9C /* SimpleARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleARViewController.h; sourceTree = "<group>"; };
+		64AB88BCA0BFA7CA4E20AB8B /* ARCameraCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCameraCapture.h; sourceTree = "<group>"; };
+		64AB8BFB3350D8B2752A6877 /* SimpleARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleARViewController.mm; sourceTree = "<group>"; };
+		8E110B0E1E76455A00FF6D76 /* ARMarkDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMarkDetector.h; sourceTree = "<group>"; };
+		8E110B0F1E76455A00FF6D76 /* ARMarkDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARMarkDetector.mm; sourceTree = "<group>"; };
 		8E7EDE7A1DA8CC1000C8FBEA /* ARTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7EDE7E1DA8CC1000C8FBEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E7EDE801DA8CC1000C8FBEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1491,6 +1502,8 @@
 		8E7EE91C1DA8CFAC00C8FBEA /* unuse */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unuse; sourceTree = "<group>"; };
 		8E7EE92D1DA8CFCE00C8FBEA /* ARViewTouchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewTouchDelegate.h; sourceTree = "<group>"; };
 		8E7EE92E1DA8D30500C8FBEA /* Data2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data2; path = ARTech/Data2; sourceTree = SOURCE_ROOT; };
+		8EB2921F1E1212BD006DF557 /* monkey.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.mtl; sourceTree = "<group>"; };
+		8EB292201E1212BD006DF557 /* monkey.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1566,6 +1579,12 @@
 				8E7EDE8B1DA8CC1000C8FBEA /* LaunchScreen.storyboard */,
 				8E7EDE8E1DA8CC1000C8FBEA /* Info.plist */,
 				8E7EDE7D1DA8CC1000C8FBEA /* Supporting Files */,
+				8E110B0E1E76455A00FF6D76 /* ARMarkDetector.h */,
+				8E110B0F1E76455A00FF6D76 /* ARMarkDetector.mm */,
+				64AB8430CA316FC6666B5B8F /* ARCameraCapture.mm */,
+				64AB88BCA0BFA7CA4E20AB8B /* ARCameraCapture.h */,
+				64AB8BFB3350D8B2752A6877 /* SimpleARViewController.mm */,
+				64AB8703C1872638D00AEF9C /* SimpleARViewController.h */,
 			);
 			path = ARTech;
 			sourceTree = "<group>";
@@ -2705,6 +2724,8 @@
 		8E7EE9051DA8CFAC00C8FBEA /* GLUtil */ = {
 			isa = PBXGroup;
 			children = (
+				8EB2921F1E1212BD006DF557 /* monkey.mtl */,
+				8EB292201E1212BD006DF557 /* monkey.obj */,
 				8E7EE9061DA8CFAC00C8FBEA /* cube.mtl */,
 				8E7EE9071DA8CFAC00C8FBEA /* cube.obj */,
 				8E7EE9081DA8CFAC00C8FBEA /* cube2.obj */,
@@ -2983,6 +3004,7 @@
 				8E7EE60E1DA8CD1B00C8FBEA /* Technique in Resources */,
 				8E7EE4F41DA8CD1B00C8FBEA /* Version in Resources */,
 				8E7EE5F81DA8CD1B00C8FBEA /* OutputStream in Resources */,
+				8EB292221E1212BD006DF557 /* monkey.obj in Resources */,
 				8E7EE70A1DA8CD1B00C8FBEA /* Types in Resources */,
 				8E7EE5291DA8CD1B00C8FBEA /* Geode in Resources */,
 				8E7EE5FF1DA8CD1B00C8FBEA /* SharedStateManager in Resources */,
@@ -3068,6 +3090,7 @@
 				8E7EE6621DA8CD1B00C8FBEA /* PointPlacer in Resources */,
 				8E7EE69A1DA8CD1B00C8FBEA /* LightPointSystem in Resources */,
 				8E7EE58E1DA8CD1B00C8FBEA /* TransferFunction in Resources */,
+				8EB292211E1212BD006DF557 /* monkey.mtl in Resources */,
 				8E7EE5E21DA8CD1B00C8FBEA /* AuthenticationMap in Resources */,
 				8E7EE7111DA8CD1B00C8FBEA /* Window in Resources */,
 				8E7EE6D41DA8CD1B00C8FBEA /* RenderLeaf in Resources */,
@@ -3439,6 +3462,7 @@
 				8E7EE9221DA8CFAC00C8FBEA /* GLGeometry.m in Sources */,
 				8E7EDEBD1DA8CCD700C8FBEA /* ARGLRender.m in Sources */,
 				8E7EE9241DA8CFAC00C8FBEA /* GLWorld.m in Sources */,
+				8E110B101E76455A00FF6D76 /* ARMarkDetector.mm in Sources */,
 				8E7EDEB21DA8CC6900C8FBEA /* ARViewController.m in Sources */,
 				8E7EDE7F1DA8CC1000C8FBEA /* main.m in Sources */,
 				8E7EE9041DA8CEA100C8FBEA /* EAGLView.m in Sources */,
@@ -3447,6 +3471,8 @@
 				8E7EDEBE1DA8CCD700C8FBEA /* ARView.m in Sources */,
 				8E7EE92B1DA8CFAC00C8FBEA /* UIImage+GL.m in Sources */,
 				8E7EE92A1DA8CFAC00C8FBEA /* tiny_obj_loader.cc in Sources */,
+				64AB8BF6E15EF0484E800A1D /* ARCameraCapture.mm in Sources */,
+				64AB8BC0A657D07EED428C6C /* SimpleARViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3696,6 +3722,7 @@
 				8E7EDEA91DA8CC1000C8FBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E7EDEAA1DA8CC1000C8FBEA /* Build configuration list for PBXNativeTarget "ARTechTests" */ = {
 			isa = XCConfigurationList;
@@ -3704,6 +3731,7 @@
 				8E7EDEAC1DA8CC1000C8FBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E7EDEAD1DA8CC1000C8FBEA /* Build configuration list for PBXNativeTarget "ARTechUITests" */ = {
 			isa = XCConfigurationList;
@@ -3712,6 +3740,7 @@
 				8E7EDEAF1DA8CC1000C8FBEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -62,8 +62,6 @@
     ARGLRender *render;
 }
 
-@synthesize arViewController;
-
 - (id) initWithFrame:(CGRect)frame pixelFormat:(NSString *)format depthFormat:(EAGLDepthFormat)depth withStencil:(BOOL)stencil preserveBackbuffer:(BOOL)retained {
     if ((self = [super initWithFrame:frame renderingAPI:kEAGLRenderingAPIOpenGLES2 pixelFormat:format depthFormat:depth withStencil:stencil preserveBackbuffer:retained])) {
         render = [ARGLRender new];
@@ -84,7 +82,7 @@
 //
    [self clearBuffers];
 
-    arglDispImage(arViewController.arglContextSettings);
+    arglDispImage(self.arglContextSettings);
 //
    [render setupWithProjection:viewProjection cameraPoseValid:self.cameraPoseValid];
 //

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ARViewController.h"
+#import "SimpleARViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
     arUtilChangeToResourcesDirectory(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST, NULL);
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [ARViewController new];
+    self.window.rootViewController = [SimpleARViewController new];
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -70,8 +70,7 @@
 
 
 // Points to the parent view controller.
-@property (nonatomic, strong) IBOutlet ARViewController *arViewController;
-
+@property (assign, nonatomic) ARGL_CONTEXT_SETTINGS_REF arglContextSettings;
 // Interaction.
 
 

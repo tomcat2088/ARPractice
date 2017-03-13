@@ -31,5 +31,5 @@ void main()
     lightStrength = nDotVP;
     colorVarying = diffuseColor * nDotVP;
     uvVarying = uv;
-    gl_Position = modelViewProjectionMatrix * position;
+    gl_Position = viewProjection * position;
 }

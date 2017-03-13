@@ -48,28 +48,6 @@
 @synthesize arglContextSettings;
 @synthesize running, runLoopInterval;
 
-
-- (void)loadView
-{
-    self.wantsFullScreenLayout = YES;
-    
-    // This will be overlaid with the actual AR view.
-    NSString *irisImage = nil;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        irisImage = @"Iris-iPad.png";
-    }  else { // UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone
-        CGSize result = [[UIScreen mainScreen] bounds].size;
-        if (result.height == 568) {
-            irisImage = @"Iris-568h.png"; // iPhone 5, iPod touch 5th Gen, etc.
-        } else { // result.height == 480
-            irisImage = @"Iris.png";
-        }
-    }
-    UIView *irisView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:irisImage]];
-    irisView.userInteractionEnabled = YES;
-    self.view = irisView;
-}
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -183,7 +161,7 @@ static void startCallback(void *userData)
         [self stop];
         return;
     }
-    
+
     // Get the format in which the camera is returning pixels.
     AR_PIXEL_FORMAT pixFormat = ar2VideoGetPixelFormat(gVid);
     if (pixFormat == AR_PIXEL_FORMAT_INVALID) {
@@ -204,7 +182,7 @@ static void startCallback(void *userData)
     // change the actual focus, but on devices with non-fixed focus, it lets arVideo
     // choose a better set of camera parameters.
     ar2VideoSetParami(gVid, AR_VIDEO_PARAM_IOS_FOCUS, AR_VIDEO_IOS_FOCUS_0_3M); // Default is 0.3 metres. See <AR/sys/videoiPhone.h> for allowable values.
-    
+
     // Load the camera parameters, resize for the window and init.
     ARParam cparam;
     if (ar2VideoGetCParam(gVid, &cparam) < 0) {
@@ -269,7 +247,7 @@ static void startCallback(void *userData)
     
     // Allocate the OpenGL view.
     glView = [[ARView alloc] initWithFrame:[[UIScreen mainScreen] bounds] pixelFormat:kEAGLColorFormatRGBA8 depthFormat:kEAGLDepth24 withStencil:YES preserveBackbuffer:YES]; // Don't retain it, as it will be retained when added to self.view.
-    glView.arViewController = self;
+//    glView.arViewController = self;
     [self.view addSubview:glView];
     
     // Create the OpenGL projection from the calibrated camera parameters.
@@ -316,6 +294,7 @@ static void startCallback(void *userData)
         [self stop];
         return;
     }
+    
     gPatt_width = 40.0f;
     gPatt_found = FALSE;
     

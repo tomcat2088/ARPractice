@@ -82,7 +82,7 @@
     
     glUseProgram(self.glProgram.value);
     
-    glUniformMatrix4fv([self.glProgram uniform:UNIFORM_VIEWPROJECTION], 1, 0, GLKMatrix4Scale(self.viewProjection, 10, 10, 10).m);
+    glUniformMatrix4fv([self.glProgram uniform:UNIFORM_VIEWPROJECTION], 1, 0, self.viewProjection.m);
     glUniformMatrix4fv([self.glProgram uniform:UNIFORM_MODEL_MATRIX], 1, 0, self.modelMatrix.m);
     glUniformMatrix3fv([self.glProgram uniform:UNIFORM_NORMAL_MATRIX], 1, 0, self.normalMatrix.m);
     
@@ -98,7 +98,7 @@
 
 - (void)update:(NSTimeInterval)interval {
     // Compute the model view matrix for the object rendered with GLKit
-    GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;//MakeScale(10, 10, 10);
+    GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
     //modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, rotation, 1.0f, 1.0f, 1.0f);
 //    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
 
